@@ -23,7 +23,7 @@
         </tr>
     </table>
     <div>
-        <h1>Ubuntu Computer Code</h1>
+        <h1 id= "answer"> </h1>
         <div>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatum soluta animi autem sequi obcaecati recusandae illum, eius, quia illo, exercitationem molestias in laboriosam distinctio cum voluptatibus tempore numquam optio!
@@ -31,5 +31,23 @@
             </p>
         </div>
     </div>
+    <input type="text" id="amount"><br>
+    <input type="text" id="not"><br>
+    <input type="text" id="intrest"><br>
+    <button id="answer" onclick=hello()>Submit</button>
+    
 </body>
+<script>
+    function hello(){
+       var amount = parseInt(document.getElementById('amount').value);
+       var not = parseInt(document.getElementById('not').value);
+       var intrest = parseInt(document.getElementById('intrest').value);
+        for(var i = 1;i <= not;i++){
+          amount += (Math.round((amount * intrest)/100));    
+        }
+
+       //alert(amount);
+       document.getElementById('answer').innerText = amount;
+    }
+</script>
 </html>
